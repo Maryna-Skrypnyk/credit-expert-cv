@@ -77,13 +77,30 @@
 }
 
 .contacts-link {
-  @include mainfont($accent-color);
+  text-decoration: none;
+  @include mainfont($primary-text-color);
+  @include transit(color);
+
+  &:hover,
+  &:focus,
+  .contact-block:hover &,
+  .contact-block:focus & {
+    color: $accent-color;
+  }
 }
 
 .contacts-link-type {
   margin-right: 10px;
   @include mainfont($primary-white-color);
   font-weight: $title-font-weight;
+
+  @include transit(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
 }
 
 .skills-container {

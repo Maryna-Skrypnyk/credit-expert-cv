@@ -9,7 +9,7 @@ $profession-font-size: 16px;
 
 $main-line-height: 1.72;
 $secondary-line-height: 2;
-$name-line-height: 2.54;
+$name-line-height: 2.5;
 $title-about-line-height: 1.08;
 $profession-line-height: 1.5;
 
@@ -27,3 +27,6 @@ $primary-text-color: #d6d8db;
 $secondary-text-color: #a8a8a8;
 $link-color: #595959;
 $dots-color: #bebebe;
+
+$duration: 250ms;
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);

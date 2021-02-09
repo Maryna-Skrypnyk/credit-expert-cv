@@ -32,3 +32,7 @@
   font-weight: $title-font-weight;
   line-height: $main-line-height;
 }
+
+@mixin transit($property) {
+  transition: $property $duration $cubic-bezier;
+}
