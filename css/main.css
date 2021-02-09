@@ -321,12 +321,6 @@ body {
   }
 }
 
-@media print {
-  body {
-    display: none;
-  }
-}
-
 .wrapper {
   background: #ffffff;
   max-width: 1200px;
@@ -461,18 +455,23 @@ img {
 
 .contacts-link {
   text-decoration: none;
-  color: #d6d8db;
+  color: #b17f83;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.72;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-property: font-weight;
+  transition-property: font-weight;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover, .contacts-link:focus,
 .contact-block:hover .contacts-link,
 .contact-block:focus .contacts-link {
-  color: #b17f83;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .contacts-link-type {
@@ -482,8 +481,12 @@ img {
   font-weight: 400;
   line-height: 1.72;
   font-weight: 700;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link-type:hover, .contacts-link-type:focus {
@@ -634,15 +637,20 @@ img {
   font-weight: 400;
   line-height: 1.72;
   text-decoration: none;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #b17f83;
+  -webkit-transition-property: font-weight;
+  transition-property: font-weight;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-item .projects-link:hover, .projects-item .projects-link:focus,
 .projects-item:hover .projects-item .projects-link,
 .projects-item:focus .projects-item .projects-link {
-  color: #b17f83;
   font-weight: 700;
+  text-decoration: underline;
 }
 
 .projects-item .tech-name {
@@ -711,10 +719,14 @@ img {
 .profession-company {
   color: #b17f83;
   text-decoration: none;
-  -webkit-transition: -webkit-text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-property: -webkit-text-decoration;
+  transition-property: -webkit-text-decoration;
+  transition-property: text-decoration;
+  transition-property: text-decoration, -webkit-text-decoration;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .profession-company:hover, .profession-company:focus {
@@ -750,10 +762,14 @@ img {
   font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
-  -webkit-transition: -webkit-text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-property: -webkit-text-decoration;
+  transition-property: -webkit-text-decoration;
+  transition-property: text-decoration;
+  transition-property: text-decoration, -webkit-text-decoration;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .education-company:hover, .education-company:focus {
@@ -772,5 +788,46 @@ img {
 .education-duties {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+@media print {
+  body {
+    padding: 0;
+  }
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .info-mob {
+    display: none;
+  }
+  .contacts-container {
+    margin: 40px 30px 0 30px;
+  }
+  .skills-container {
+    margin: 30px 30px 0 30px;
+  }
+  .about-me-container {
+    padding: 35px 25px;
+  }
+  .info-container {
+    margin-bottom: 20px;
+  }
+  .info-tablet {
+    margin-bottom: 10px;
+  }
+  .projects-container {
+    margin-bottom: 20px;
+  }
+  .projects-item {
+    margin-left: 15px;
+  }
+  .dots {
+    display: none;
+  }
+  .link-description {
+    display: block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

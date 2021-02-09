@@ -79,15 +79,16 @@
   .projects-link {
     @include mainfont($link-color);
     text-decoration: none;
+    color: $accent-color;
 
-    @include transit(color);
+    @include transit(font-weight);
 
     &:hover,
     &:focus,
     .projects-item:hover &,
     .projects-item:focus & {
-      color: $accent-color;
       font-weight: $title-font-weight;
+      text-decoration: underline;
     }
   }
 

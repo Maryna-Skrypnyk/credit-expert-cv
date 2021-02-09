@@ -33,6 +33,8 @@
   line-height: $main-line-height;
 }
 
-@mixin transit($property) {
-  transition: $property $duration $cubic-bezier;
+@mixin transit($property...) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $cubic-bezier;
 }

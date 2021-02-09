@@ -78,14 +78,15 @@
 
 .contacts-link {
   text-decoration: none;
-  @include mainfont($primary-text-color);
-  @include transit(color);
+  @include mainfont($accent-color);
+  @include transit(font-weight);
 
   &:hover,
   &:focus,
   .contact-block:hover &,
   .contact-block:focus & {
-    color: $accent-color;
+    font-weight: $title-font-weight;
+    text-decoration: underline;
   }
 }
 
