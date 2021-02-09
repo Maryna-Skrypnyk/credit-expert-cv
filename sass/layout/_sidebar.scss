@@ -1,0 +1,109 @@
+.sidebar {
+  background: $sidebar-bg-color;
+  min-width: 320px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+
+  @media screen and (min-width: 768px) {
+    max-width: 320px;
+  }
+
+  @media screen and (min-width: 960px) {
+    min-width: 370px;
+  }
+}
+
+.info-mob {
+  padding: 15px 35px 30px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-left: calc((100vw - 320px) / (480 - 320) * (60 - 35) + 35px);
+    padding-right: calc((100vw - 320px) / (480 - 320) * (60 - 35) + 35px);
+  }
+
+  .profession-mob {
+    margin-bottom: 15px;
+    @include mainfont($primary-text-color);
+  }
+
+  .name-mob {
+    @include namefont($primary-white-color);
+
+    @media screen and (max-width: 480px) {
+      font-size: calc((100vw - 320px) / (480 - 320) * (30 - 24) + 24px);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media screen and (min-width: 960px) {
+      font-size: 35px;
+    }
+  }
+
+  .personal-mob {
+    @include secondaryfont();
+    color: $accent-color;
+  }
+
+  .profession-divider-mob {
+    color: $accent-color;
+  }
+}
+
+.contacts-container {
+  margin: 50px 35px 0 35px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: calc((100vw - 320px) / (480 - 320) * (60 - 35) + 35px);
+    margin-right: calc((100vw - 320px) / (480 - 320) * (60 - 35) + 35px);
+  }
+
+  @media screen and (min-width: 960px) {
+    margin: 50px 40px 0 40px;
+  }
+}
+
+.contacts-title,
+.skills-title {
+  margin-bottom: 10px;
+  @include titlefont($primary-white-color);
+}
+
+.contacts-link {
+  @include mainfont($accent-color);
+}
+
+.contacts-link-type {
+  margin-right: 10px;
+  @include mainfont($primary-white-color);
+  font-weight: $title-font-weight;
+}
+
+.skills-container {
+  margin: 40px 35px 0 35px;
+
+  @media screen and (max-width: 767px) {
+    margin-left: calc((100vw - 320px) / (480 - 320) * (60 - 35) + 35px);
+    margin-right: calc((100vw - 320px) / (480 - 320) * (60 - 35) + 35px);
+  }
+
+  @media screen and (min-width: 960px) {
+    margin: 50px 40px 0 40px;
+  }
+}
+
+.skills-item {
+  margin-left: 20px;
+  @include mainfont($accent-color);
+}
+
+.skills-text {
+  color: $primary-text-color;
+}
